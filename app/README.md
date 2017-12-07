@@ -12,7 +12,10 @@ This project assumes you have PHP, composer, and git installed on your machine
 
 ### Installing
 
-Clone the project
-RUN composer install
+git clone https://github.com/kaladakienka/temper.git
+cd temper/app
+cp .env.example .env
+RUN php ../composer.phar install
+RUN php artisan key:generate
 RUN php artisan serve
 Navigate to http://localhost:8000
